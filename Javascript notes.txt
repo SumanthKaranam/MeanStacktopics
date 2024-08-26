@@ -1,0 +1,526 @@
+Object.getOwnPropertyNames(obj)     // to get the propety names of an object
+
+*javascript ignores mutliple spaces.
+If you add a number and a string, the result will be a string!
+
+==	equal to
+===	equal value and equal type
+!=	not equal
+!==	not equal value or not equal type
+>	greater than
+<	less than
+>=	greater than or equal to
+<=	less than or equal to
+?	ternary operator
+
+i=5;
+x=i++     =>x=5,i=6
+
+i=5
+x=++i      =>x=6,i=6
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+         				                          javascript
+					                          ==========
+Data types: Number, String, Object.
+----------
+
+(1)Variables   :   Store data. (Let, Var, Const)
+  ==========
+Variables are containers for storing data (values).
+
+There are 3 ways to declare a JavaScript variable:
+
+->Using var
+->Using let
+->Using const
+-----------------------------------------------------------
+Let(block scope) :
+the let keyword was introduced in ES6 (2015).
+
+Variables defined with let cannot be Redeclared.
+ex:
+let x = "John Doe";
+
+let x = 0;
+-----------------------------------------------------------
+var(functional scope) :
+Variables defined with let must be Declared before use.
+
+Variables defined with let have Block Scope.
+-----------------------------------------------------------
+Const(block scope) :
+The const keyword was introduced in ES6 (2015).
+
+Variables defined with const cannot be Redeclared.
+const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error
+
+Variables defined with const cannot be Reassigned.
+const PI = 3.14159265359;
+
+Variables defined with const have Block Scope.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+(2)Different loops  : (For each, map, filter, array reduce, every, some, find, for in, for of, while) 
+==================
+
+(2.1)The Array forEach() Method
+--------------------------
+The forEach() method calls a function (a callback function) once for each array element.
+
+example
+-------
+function handlePosts() {
+    var posts = [
+      { id: 23, title: 'Daily JS News' },
+      { id: 52, title: 'Code Refactor City' },
+      { id: 105, title: 'The Brightest Ruby' }
+    ];
+    
+    posts.forEach(function(post) {
+      savePost(post);
+    });
+}
+
+***the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+
+(2.2) Array map()
+=================
+
+The map() method creates a new array by performing a function on each array element.
+
+The map() method does not execute the function for array elements without values.
+
+The map() method does not change the original array.
+
+example
+-------
+var images = [
+  { height: '34px', width: '39px' },
+  { height: '54px', width: '19px' },
+  { height: '83px', width: '75px' },
+];
+
+var heights = images.map(function (image) {
+  return image.height;
+});
+
+
+
+(2.3)filter()
+==========
+The filter() method creates a new array with array elements that passes a test.
+
+example
+---------
+var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
+
+var filteredNumbers = numbers.filter(function (number) {
+  return number > 50;
+});
+
+
+(2.4)Array reduce()
+=================
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduce() method works from left-to-right in the array.
+
+example
+--------
+var trips = [{ distance: 34 }, { distance: 12 }, { distance: 1 }];
+
+var totalDistance = trips.reduce(function (sum, trip) {
+  return trip.distance + sum;
+}, 0);
+
+(2.5)every()
+===========
+The every() method check if all array values pass a test.
+
+example
+--------
+var users = [
+  { id: 21, hasSubmitted: true },
+  { id: 62, hasSubmitted: false },
+  { id: 4, hasSubmitted: true },
+];
+
+var hasSubmitted = users.every(function (user) {
+  return user.hasSubmitted;
+});
+
+(2.6)some()
+==========
+The some() method check if some array values pass a test.
+
+example
+-------
+var requests = [
+  { url: '/photos', status: 'complete' },
+  { url: '/albums', status: 'pending' },
+  { url: '/users', status: 'failed' },
+];
+
+var inProgress = requests.some(function (request) {
+  return request.status === 'pending';
+});
+
+(2.7)find()
+===========
+The find() method returns the value of the first array element that passes a test function.
+
+example:
+-----------
+var users = [
+  { id: 1, admin: false },
+  { id: 2, admin: false },
+  { id: 3, admin: true },
+];
+
+var admin = users.find(function (user) {
+  return user.admin;
+});
+
+
+(2.8)The For In Loop
+===================
+The JavaScript for in statement loops through the properties of an Object
+
+Syntax
+for (key in object) {
+  // code block to be executed
+}
+
+example
+---------
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+//output John Doe 25
+note******
+Do not use for in over an Array if the index order is important.
+
+The index order is implementation-dependent, and array values may not be accessed in the order you expect.
+
+It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.
+
+(2.9)The For Of Loop
+====================
+The JavaScript for of statement loops through the values of an iterable object.
+
+It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists
+
+
+Syntax
+for (variable of iterable) {
+  // code block to be executed
+}
+
+example
+--------
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "<br>";
+}
+
+
+//output BMW
+Volvo
+Mini
+
+(2.10) While Loop
+=================
+The while loop loops through a block of code as long as a specified condition is true.
+
+Syntax
+while (condition) {
+  // code block to be executed
+}
+
+example
+----------
+let text = "";
+let i = 0;
+while (i < 10) {
+  text += "<br>The number is " + i;
+  i++;
+}
+
+(2.11)Do While Loop
+=================
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true,
+then it will repeat the loop as long as the condition is true.
+
+Syntax
+do {
+  // code block to be executed
+}
+while (condition);
+
+example
+--------
+let text = ""
+let i = 0;
+
+do {
+  text += "<br>The number is " + i;
+  i++;
+}
+while (i < 10); 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modules in Javascript  : A small unit of indepedent, reusable code that used as the building block in creating java script application. 
+=====================
+Now JavaScript modules are the best implementation of Closure. 
+Modules are small units of independent, reusable code that is desired to be used as the building blocks in creating a non-trivial Javascript 
+application. 
+Modules let the developer define private and public members separately, making it one of the more desired design patterns in JavaScript paradigm. 
+You may see modules as Classes as in any other Object-Oriented Programming Language.
+
+<script>
+// This is a Rectangle Module.
+function Rectangle()
+{
+	var length, width;
+
+	function create(l, w)
+	{
+		length = l;
+		width = w;
+	}
+
+	function getArea()
+	{
+		return (length * width);
+	}
+
+	function getPerimeter()
+	{
+		return (2 * (length + width));
+	}
+
+	// This is the object to consist public members.
+	// The rest are private members.
+	var publicAPI = {
+		create : create,
+		getArea : getArea,
+		getPerimeter : getPerimeter
+	};
+
+	// To be returned upon creation of a new instance.
+	return publicAPI;
+}
+// create a Rectangle module instance
+var myRect = Rectangle();
+myRect.create(5, 4);
+document.write("Area: " + myRect.getArea());
+document.write("<br> Perimeter: " + myRect.getPerimeter()); </script>
+
+Here, the Rectangle() function serves as an outer scope that contains the variables required 
+i.e. length, width, as well as the functions create(), getArea(), and getPerimeter(). 
+All these together are the private details of this.
+Rectangle module that cannot be accessed/modified from the outside. 
+On the other hand, the public API as the name suggests is an object that consists of three functional members 
+and is returned when the Rectangle function execution is complete. 
+Using the API methods we can create and get the value of the area and perimeter of the rectangle.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Classes in js:
+=============
+ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
+JavaScript Classes are templates for JavaScript Objects.
+Use the keyword class to create a class.
+Always add a method named constructor():
+
+Syntax
+class ClassName {
+  constructor() { ... }
+}
+Example
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+The Constructor Method :
+The constructor method is a special method:
+
+It has to have the exact name "constructor"
+It is executed automatically when a new object is created
+It is used to initialize object properties
+If you do not define a constructor method, JavaScript will add an empty constructor method.
+
+Class Inheritance:
+To create a class inheritance, use the extends keyword.
+
+A class created with a class inheritance inherits all the methods from another class:
+
+The super() method refers to the parent class.
+
+By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's 
+properties and methods.
+
+//You cannot use the class yet.
+//myCar = new Car("Ford")
+//This would raise an error.
+
+Static class methods are defined on the class itself.
+You cannot call a static method on an object, only on an object class.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Calling API:
+===========
+Here are the possible ways to make an API call:
+XMLHttpRequest
+fetch
+Axios
+jQuery
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Promises:    It's a js object that links producing and consuming codes.
+=========
+"Producing code" is code that can take some time
+
+"Consuming code" is code that must wait for the result
+
+A Promise is a JavaScript object that links producing code and consuming code
+
+myPromise.state	    myPromise.result
+"pending"	    undefined
+"fulfilled"	    a result value
+"rejected"    	    an error object
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DOM (Document Object Model) : When web page is loaded browser creates DOM of the page.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Async and await:
+===============
+"async and await make promises easier to write"
+
+async makes a function return a Promise
+
+await makes a function wait for a Promise.
+
+async = Promise.resolve();
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Error Handling :
+===============
+The try statement lets you test a block of code for errors.
+
+The catch statement lets you handle the error.
+
+The throw statement lets you create custom errors.
+
+The finally statement lets you execute code, after try and catch, regardless of the result.
+
+try {
+  Block of code to try
+}
+catch(err) {
+  Block of code to handle errors
+}
+finally {
+  Block of code to be executed regardless of the try / catch result
+}
+	
+
+
+The HTML DOM (Document Object Model)
+When a web page is loaded, the browser creates a Document Object Model of the page.
+
+The HTML DOM model is constructed as a tree of Objects:
+
+
+				Document
+				   |
+		-----------------------------------------
+		|					|
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+6.Spread Operator
+================
+The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+
+Example
+---------
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+// 1,2,3,4,5,6
+
+Rest Operator
+=============
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+
+document.write("<p>" + one + "</p>");
+document.write("<p>" + two + "</p>");
+document.write("<p>" + rest + "</p>");
+//
+  1
+  2
+  3,4,5,6
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Destructing Arrays
+==================
+Here is the old way of assigning array items to a variable:
+
+Before:
+------
+const vehicles = ['mustang', 'f-150', 'expedition'];
+
+// old way
+const car = vehicles[0];
+const truck = vehicles[1];
+const suv = vehicles[2];
+Here is the new way of assigning array items to a variable:
+
+With destructuring:
+-------------------
+const vehicles = ['mustang', 'f-150', 'expedition'];
+
+const [car, truck, suv] = vehicles;
+     
+      (or) for only required one
+const vehicles = ['mustang', 'f-150', 'expedition'];
+
+const [car,, suv] = vehicles;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+8. Immutability concepts
+=========================
+In JavaScript, only objects and arrays are mutable, not primitive values. 
+(You can make a variable name point to a new value, but the previous value is still held in memory.
+Immutables are the objects whose state cannot be changed once the object is created. Strings and Numbers are Immutable.
+                             
+                                    (OR)
+Immutable: Objects whose state cannot be changed once the object is created. Strings and Numbers are immutable.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Interface: It is used to achieve total abstraction. Since java does not support multiple inheritance in case of class, but by using interface it
+can achieve multiple inheritance.  it is also used to achieve loose coupling.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Decorators: A Decorator is a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter. 
+Decorators use the form @expression, where expression must avaluate to a function that will be called at runtime with information about the
+decorated declaration.
+
+
+
+
+
+
+
+

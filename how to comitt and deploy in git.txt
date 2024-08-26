@@ -1,0 +1,44 @@
+how to comitt git :-
+to initial git repository by command :- git init 
+
+to add all files use git add .
+
+it adds to staging area 
+
+to see the status use git status 
+
+to commit the chnages use git commit -m ""
+
+create a new repository in github 
+
+then use command git remote add origin git hub link 
+
+after that use git branch -main
+
+git push -u origin main
+
+
+To host in git:-
+
+
+at first use the command 
+git remote add origin <https://github.com/><username>/<repository>.git
+
+Deploying using angular-cli-ghpages
+Inside the sample folder, add the angular-cli-ghpages package using the following command:
+
+ng add angular-cli-ghpages
+Now, we can proceed to deploy.
+
+The deploy command is simple, and we must add a base-href argument with the name of the repository in it:
+
+ng deploy --base-href=/angular-app/
+Here, the deploy command does all the work. We don’t have to manually build or commit those files.
+
+Once this command finishes running, check the files in the repository using:
+
+https://github.com/<username>/<repositoryname>
+We can see the hosted corresponding site at the following link:
+
+https://<username>.github.io/<repositoryname>
+

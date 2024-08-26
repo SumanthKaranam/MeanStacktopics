@@ -1,0 +1,33 @@
+Commands for react
+
+To create a new React project, use:
+npx create-react-app my-app
+
+JSX (JavaScript XML):
+JSX allows you to write HTML-like syntax in your React components.
+Example:
+const element = <h1>Hello, React!</h1>;
+
+State and Props:
+State holds data that can change within a component:
+const [count, setCount] = useState(0);
+
+Props allow passing data from parent to child components:
+<MyComponent name="John" />
+
+Hooks:
+useState for managing state.
+useEffect for side effects (e.g., fetching data).
+useRef for accessing DOM elements.
+Example:
+useEffect(() => {
+  // Code to run after component renders
+}, [dependency]);
+
+Testing:
+Run tests:
+npm test
+
+Build and Deploy:
+Build your app for production:
+npm run build

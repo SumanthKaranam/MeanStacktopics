@@ -1,0 +1,21 @@
+https://www.postman.com/downloads/   ---------------  Post Office install
+
+create folder and then open in cmt
+ 
+npm install -g express-generator
+
+express --view=pug myapp
+
+open in Vs code and on myapp open with integral terminal 
+
+npm install
+
+npm start
+
+localhost:3000   -----  welcome to express
+
+packages for writing code to run in Rest-Apl -----
+npm install express
+npm install cros
+
+

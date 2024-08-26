@@ -1,0 +1,83 @@
+The important features of Cypress are listed below −
+
+Supports Test-Driven development.
+
+Provides Dashboard services.
+
+Efficient debugging with Developer Tools accompanied with generation of stack trace and errors.
+
+Provides the screenshots for failed tests.
+
+Not necessary to add waits to stop the execution for some time. By-default, the waits are applied, prior to executing the following step or assertion.
+
+Able to monitor and control the characteristics of server response, functions, and timers, which are essentially needed for unit testing.
+
+Check and manage network traffic.
+
+Allows the multi-browser support.
+
+In-built feature to capture videos of execution is available.
+
+Can be integrated with continuous integration tools.
+
+Page responsiveness with viewport sizing.
+
+Reloads changes applied to tests by default.
+
+Friendly Application Programming Interfaces (APIs) are available.
+
+Test runner available, which allows the test execution straight from the User Interface (UI).
+-------------------
+
+to create a cypress file we need to create a folder then run command npm init and after that we need to run npm i express --save-dev
+--------
+You can open Cypress by running − node_modules/.bin/cypress open or npx cypress open 
+npx cypress run to run it in terminal
+
+cy.screenshot() to take screenshot
+-----------
+if we need auto recommendation for the completing the line in cypress we need write " /// <reference types="Cypress" />
+------------
+chaining get to get is like starting again from start
+cy.get().get() we shouldn't do in this way we have to chain "find to  "get" 
+-------------
+there is custom command and queries where we can write in command.js where we can use it in wherever we want
+for eaxmple--
+Cypress.Commands.add("submitForm", ()=>{
+cy.get('form button[type="submit"]').click();
+})
+
+query--
+Cypress.Commands.addQuery("getById", (id)=>{
+return () =>{
+return cy.get(`[data-cy="${id}"]`).click();
+}
+})
+
+stubs---
+with stubs we can use fake implementation
+- A replacement for exisiting functions or methods
+-used for evaluating and controlling function calls
+- Does replace the function
+
+fixtures----
+with fixtures we can share the data to multiple data files
+----------
+we can use "as" to create a alias for any function instead of directly calling it.
+----------
+Spy-
+- A listener thts attached to a function/method
+-Used for evaluating/asserting function calls.
+- Does not change or replace the funtion
+------------
+cy.clock() it shoould be in before each
+manipulate the clock
+is used for timeout things
+cy.tick(2000) to set time
+---------------
+cy.intercept('POST', '/newsletter')
+we need give which type method we are using and http url link
+used for http requsts
+-----------
+
+

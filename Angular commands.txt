@@ -1,0 +1,35 @@
+https://code.visualstudio.com/download  ------------  VS Software download
+npm i -g typescript --------------------------------  To install type script
+npm install -g@angular/cli
+
+npm --------------- Node Package Manager
+
+ng new name    ------------------------------ new file
+ng generate component name ------------------ new component 
+ng generate pipe name  ---------------------- to create new pipe
+ng generate class name ---------------------- to create a new class
+ng generate service name -------------------- to generate new service
+ng test   ----------------------------------- to generate test cases
+ng generate module name  -------------------- to generate new module
+
+ng serve -o  ------------------------   run the file and get Out Put
+ng build ----------------------------   Build the dist 
+ng serve --prod  -------------------    To remove Vendor.js from the file where file contain chunka 
+                                        (runtime, main, polyfills, styles, vendor)
+{{text}}   -----  Interpolation
+
+
+ANGULAR: Interpolation , Property Binding , Event Binding , ng if , ng For   ,   Webpack, Exlint , 
+
+AOT--- Ahead of Time Compilation , Tree Shaking , Angular Production Build..
+
+Unit Testing ---Done through Jasmin testing platform and karma is ------- Advantages
+
+
+AAA Pattern ------- Arrange , Act and Assert (Arrange – setup the testing objects and prepare the prerequisites for your test.
+Act – perform the actual work of the test. Assert – verify the result.)
+
+Bootstrap/Bootstraping of Angular :   angular json ->main->bootstrap module ->app module->boootsttrap app component ->app component.ts->app component html
+                                      index.html->app component ts
+
+INTERFACE and DECORATION

@@ -1,0 +1,28 @@
+A.
+1. Due to software error.
+2. As software not updated.
+3. Present software not suitable for the working platform.
+4. Working platform was updated.
+5. Platform was updated as requested by clients.
+
+B.
+1. Delay in production.
+2. Production is delay as testing team was late.
+3. Testing team was late because development team takes time to develop.
+4. Developmen team was late because there is an additional requirement from client.
+5. Additional requirement from client as there is an huge requirement from client side.
+
+C. 
+1. For better oppirtunity.
+2. As they no longer feel the work they do as challenging.
+3. Because employees want to engaged with their work and feel like continuous learning.
+4. This is possible only by learning new techologies and working on them.
+5. There is a huge demand for emerging technologies in the market.
+D.
+1. As timesheet was not updated on time.
+2. Because the project was not tagged.
+3. Project was not tagged as project was not conformed.
+4. Project not conformed as there was delay from client side.
+5. Delay in client side because additional information were being added.
+
+2074727

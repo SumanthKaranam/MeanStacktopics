@@ -1,0 +1,200 @@
+HTML
+----
+1.HTML stands for Hyper Text Markup Language.
+2.Tag or Element
+----------------
+Text placed in between left angle brace '<' and right angle brace '>' is called a tag or element.
+syntax(set of rules)
+--------------------
+open(start) tag				close(end) tag
+----------------------------------------------------------------
+<html>---------------------------------------</html>
+<p>------------------------------------------</p>
+
+4.HyperText = HyperLink = Navigation(Moving from one page to another page)
+
+5.Markup Language : Syntax which consists Tags or Elements / Attributes and Parameters
+
+6.HTML was started developing in 1990's by Tim Berner's Lee
+HTML4.01 was released in the year 1999
+
+7.W3C(World Wide Web Consortium - w3.org) was founded in 1994 by Tim Berner's Lee
+
+8.W3C provides guidelines / standards for those who are writing html.
+
+9.HTML is a case insensitive language.
+ex : <HTML> = <htML> = <html> (lowercase)
+ex : <BODY BGCOLOR=RED> = <body bgcolor="red"> or <body bgcolor='red'>
+
+10.HTML is a global language i.e, it can be understood by all the available browsers.
+
+11.We save it with .html or .htm extension.
+
+12.Latest version of HTML is HTML5
+
+13.HTML5=HTML4 + XHTML + ADVANCED JAVASCRIPT
+
+14.Tools
+--------
+Editor : Notepad, Notepad++, Edit Plus, Sublime Text, Visual Studio Code,          Eclipse, Netbeans...
+Browsers : Google Chrome, Mozilla Firefox, Internet Explorer, Safari and            Opera
+
+15.Types of Tags
+----------------
+1.Container or Paired tag
+-------------------------
+A tag which consists both opening and closing
+ex : <p>---------------</p>
+     <html>------------</html>
+     <b>----------------</b>
+/ - forward slash
+
+2.Empty or Unpaired tag
+-----------------------
+A tag which consists only opening
+ex : <br>, <hr>, <img>......
+NOTE
+----
+HTML, HTML5, ANGULAR : <br>, <hr>, <img>......
+XHTML, REACTJS : <br/>, <hr/>, <img/> (self closed)
+
+
+Structure of html
+-----------------
+
+
+Tag or Element
+--------------
+Text placed in between left angle brace '<' and right angle brace '>' is called a tag or element.
+syntax(set of rules)
+--------------------
+open(start) tag				close(end) tag
+-------------------------------------------------------------
+ <html>-------------------------------------</html>
+ <body>-------------------------------------</body>
+NOTE:closing tag will be represented with forward slash(/)
+
+Structure of html
+-----------------
+
+
+<br> stands for break or new line or line break
+&nbsp; stands for non-breaking space or blank space or single space
+sub : subscript or base
+sup : superscript or power
+
+Nested tags : Tag Inside Tag
+
+Zoom in : ctrl + + (maximum 500%)
+Zoom out : ctrl + - (minimum 25%)
+original view : ctrl + 0 (default 100%)
+
+
+
+W3C deprecated or removed or deleted tags : acronym, font, marquee, strike, frameset, frame, audio, video
+
+W3C deprecated or removed or deleted attributes : align, size, color, face, width, size, color, noshade, bgcolor, strike, border, hspace, vspace, width, height, rules, cellpadding, cellspacing, bordercolor
+
+
+Types of Lists
+--------------
+1.Unordered List
+2.Ordered List
+3.Nested List
+4.Description or Definition List
+
+li : list item
+
+
+
+tr : table row
+th : table heading
+td : table data
+
+
+XHTML
+-----
+1.XHTML is a stricter and cleaner version of html : definition
+2.XHTML stands for eXtensible Hyper Text Markup Language
+3.XHTML is recommended by W3C(World Wide Web Consortium)
+Differences between HTML and XHTML
+----------------------------------
+HTML					XHTML
+-----------------------------------------------------------------
+<HTML>					<html>
+<P>-----</p>				<p>--------</p>
+<p>-----				<p>--------</p>
+<b><i>------</b></i>			<b><i>-----</i></b>
+<TD WIDTH=100>				<td width="100">
+					<td width='100'>
+<hr>					<hr/>
+<img>					<img/>
+<ul>					<ul>
+  <li>-----</li>                           <li>-----</li>
+  <li>---                                  <li>---
+     <ul>                                     <ul>
+        <li>----</li>                            <li>----</li>
+     </ul>                                    </ul>
+  <li>-----</li>                            </li>
+</ul>					    <li>-----</li>
+                                         </ul>
+NOTE
+-----
+<hr>, <br>, <img> : html, html5, angular
+<hr/>, <br/>, <img/> - self closed : XHTML, ReactJS
+
+DTD - Document Type Declaration
+-------------------------------
+to recognise the version of the html page
+
+HTML5
+-----
+<!DOCTYPE html>
+<html>
+
+
+XHTML
+-----
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+
+HTML4
+-----
+<html>
+or
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+META tags : SEO (Search Engine Optimization)
+
+SEO (Search Engine Optimization)
+--------------------------------
+SEO is the activity of optimizing(improvements) webpages to become search engine friendly thus getting higher positions in search engines.
+
+
+1.title
+-------
+1.unique
+2.60 characters
+
+2.<meta name="description" content="140-160 characters">
+
+3.<meta name="keywords" content="keyword1,keyword2,....keywordn">
+:30-40 unique words
+
+4.file names : keywords - 3-4 words
+-----------------------------------
+online-ms-office-training-course.html
+
+5.h1-h6 : possible use keywords
+
+6.<img alt="0-40 unique words">
+
+Traffic or Visitors : http://any website.html
+
+Digital Marketing : Traffic
+

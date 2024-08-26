@@ -1,0 +1,50 @@
+Node Js
+---------------
+Node is Runtime Environment to run JavaScript Code
+
+Advantages : 
+Good For Microservices , Easy to learn , Fast , Highly built Packages in npm , JavaScript on server ,
+Support and Community.
+Ex: Paypal , Uber , WallMart , Netflix
+DisAdvantages : CPU bottleneck , Few Experienced Developers , Immature tools
+
+read–eval–print loop (REPL) 
+ 
+Eg:
+> var name="Reddy"
+undefined
+> name
+'Reddy'
+> function add() {
+... return 34
+... }
+undefined
+> add()
+34
+------------------------------------------------------------------------------------------------------------------------------------------------
+npm init -y     ....... after that type  ............ npm install express  ( OR npm init -y ---- npm install cors --- npm install express )
+
+Not only Express but many packages are installed because express package is depends on other packages so we use npm command so that all related 
+packages can installed at once, rather than installing one by one packages so that the time can be saved and not wasting much time on 
+installing one by one packages.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Global --- It is considered as a Brain as it has all inbuilt. So no need to import any modules.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Java Script is a Single Threaded but perfors Async. When an async code runs ....  (process of code runs in node js)
+( Stack ---- Webapi --- Task queue ) this is Called/Considered as Event-Loops. This is the main reason that node-js is very special.
+The node-js use a method called Event-Looping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

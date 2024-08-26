@@ -1,0 +1,104 @@
+HTTP defines a set of request methods to indicate the desired action to be performed for a given resource.
+ Although they can also be nouns, these request methods are sometimes referred to as HTTP verbs.
+ Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be safe, idempotent, or cacheable.
+
+GET
+The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+
+HEAD
+The HEAD method asks for a response identical to a GET request, but without the response body.
+
+POST
+The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.
+
+PUT
+The PUT method replaces all current representations of the target resource with the request payload.
+
+DELETE
+The DELETE method deletes the specified resource.
+
+CONNECT
+The CONNECT method establishes a tunnel to the server identified by the target resource.
+
+OPTIONS
+The OPTIONS method describes the communication options for the target resource.
+
+TRACE
+The TRACE method performs a message loop-back test along the path to the target resource.
+
+PATCH
+The PATCH method applies partial modifications to a resource.
+
+
+-----------------------------------------------------------
+
+Status codes:-
+
+This is a list of Hypertext Transfer Protocol (HTTP) response status codes. 
+Status codes are issued by a server in response to a client's request made to the server.
+ It includes codes from IETF Request for Comments (RFCs), other specifications, and some additional codes used in some common applications of the HTTP. 
+The first digit of the status code specifies one of five standard classes of responses.
+ The message phrases shown are typical, but any human-readable alternative may be provided.
+ Unless otherwise stated, the status code is part of the HTTP/1.1 standard (RFC 7231).[1]
+
+The Internet Assigned Numbers Authority (IANA) maintains the official registry of HTTP status codes.[2]
+
+All HTTP response status codes are separated into five classes or categories. 
+The first digit of the status code defines the class of response, while the last two digits do not have any classifying or categorization role.
+ There are five classes defined by the standard:
+
+1xx informational response – the request was received, continuing process
+2xx successful – the request was successfully received, understood, and accepted
+3xx redirection – further action needs to be taken in order to complete the request
+4xx client error – the request contains bad syntax or cannot be fulfilled
+5xx server error – the server failed to fulfil an apparently valid request
+
+--------------------------------------------------------------
+Json while working with APIs
+
+REST APIs should accept JSON for request payload and also send responses to JSON.
+ JSON is the standard for transferring data. 
+Almost every networked technology can use it: JavaScript has built-in methods to encode and 
+decode JSON either through the Fetch API or another HTTP client.
+
+JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.
+ It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, 
+so it can be displayed on a web page, or vice versa).
+
+Advantages:-
+
+1. JSON is Faster
+2. Schema Support
+3. Server Parsing
+4. Tool for sharing data
+----------------------------------------------------------------------------------------------------------------------------------------------------
+CROS  (Cross Origin Resource Sharing) :
+It is used to access data fron another website by Whitelisting i.e by enable CROS.
+                                            (OR)
+Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port)
+other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" 
+request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, 
+the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+
+An example of a cross-origin request: the front-end JavaScript code served from https://domain-a.com uses XMLHttpRequest to make a request for 
+https://domain-b.com/data.json.
+
+For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow t
+he same-origin policy. This means that a web application using those APIs can only request resources from the same origin the application was 
+loaded from unless the response from other origins includes the right CORS headers.
+--------------------
+This cross-origin sharing standard can enable cross-origin HTTP requests for:
+
+     .Invocations of the XMLHttpRequest or Fetch APIs, as discussed above.
+     .Web Fonts (for cross-domain font usage in @font-face within CSS), so that servers can deploy TrueType fonts that can only be loaded 
+      cross-origin and used by web sites that are permitted to do so.
+     .WebGL textures.
+     .Images/video frames drawn to a canvas using drawImage().
+     .CSS Shapes from images.
+This is a general article about Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.
+ 
+
+
+
+
+
